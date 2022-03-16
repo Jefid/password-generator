@@ -4,6 +4,14 @@
 var generateBtn = document.querySelector("#generate");
 
 
+
+var lower = "qwertyuiopasdfghjklzxcvbnm";
+var upper = "QWERTYUIOPASDFGHJKLZXCVBNM";
+var num = "0123456789";
+var sym = "~!@#$%^&*?_";
+var passwordLength = "";
+
+
 var initialQuestions = function () {
 
   var promptLength = prompt(
@@ -13,7 +21,19 @@ var initialQuestions = function () {
   if (promptLength <= 128 && promptLength >= 8) {
     alert("YOU ENTERED THE CORRECT AMOUNT");
 
+    var lowercasecheck = confirm("Would you like to include lowercase letters?");
+    var uppercasecheck = confirm("Would you like to include uppercase? letters");
+    var addnumberscheck = confirm("Would you like to include numbers?");
+    var addspecialcheck = confirm("Would you like to include special characters?");
     
+    var passwordLength = promptLength;
+    console.log(lowercasecheck);
+    console.log(uppercasecheck);
+    console.log(addnumberscheck);
+    console.log(addspecialcheck);
+    console.log(passwordLength);
+      
+  
 
 
 
