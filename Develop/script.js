@@ -1,8 +1,41 @@
 // Assignment code here
 
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+
+
+var initialQuestions = function () {
+
+  var promptLength = prompt(
+    "HOW LONG YOU WANT THAT PASSWORD? \r\nMinimum length of 8 and max length 128!"
+  );
+
+  if (promptLength <= 128 && promptLength >= 8) {
+    alert("YOU ENTERED THE CORRECT AMOUNT");
+
+    
+
+
+
+  } else {
+    alert("PASSWORD LENGTH MUST BE 8-128");
+    initialQuestions();
+  }
+
+};
+
+
+
+
+
+initialQuestions();
+
+//
+// // there are many ways to use the prompt feature
+// sign = window.prompt(); // open the blank prompt window
+// sign = prompt();       //  open the blank prompt window
+// sign = window.prompt('Are you feeling lucky'); // open the window with Text "Are you feeling lucky"
+// sign = window.prompt('Are you feeling lucky', 'sure'); // open the window with Text "Are you feeling lucky" and default value "sure
 
 // Write password to the #password input
 function writePassword() {
@@ -10,7 +43,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
