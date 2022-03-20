@@ -14,7 +14,6 @@ function writePassword() {
 
 //Generate Password Start
 function generatePassword() {
-
   var lower = "qwertyuiopasdfghjklzxcvbnm";
   var upper = "QWERTYUIOPASDFGHJKLZXCVBNM";
   var num = "0123456789";
@@ -64,9 +63,9 @@ function generatePassword() {
         break;
       }
     }
-      return password;
+    return password;
   } else {
     alert("PASSWORD LENGTH MUST BE 8-128");
     return "PLease try again!";
   }
-};
+}
